@@ -30,8 +30,8 @@ body { background: #0f0f0f; }
 
 header {
    position: relative;
-   height: 800px;
-   min-height: 500px;
+   height: 1004px;
+   min-height: 800px;
    width: 100%;
    background: #161415 url(../images/header-background.jpg) no-repeat top center;
    background-size: cover !important;
@@ -342,12 +342,12 @@ ul#nav li.current a { color: white }
   	-webkit-animation: wordpress 2s ease;
 }
 .css {
-  	width: 50%;
+  	width: 40%;
   	-moz-animation: css 2s ease;
   	-webkit-animation: css 2s ease;
 }
 .html5 {
-  	width: 50%;
+  	width: 40%;
   	-moz-animation: html5 2s ease;
   	-webkit-animation: html5 2s ease;
 }
@@ -371,11 +371,11 @@ ul#nav li.current a { color: white }
 }
 @-moz-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 40%;  }
 }
 @-moz-keyframes html5 {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 40%;  }
 }
 @-moz-keyframes jquery {
   0%   { width: 0px;  }
@@ -396,11 +396,11 @@ ul#nav li.current a { color: white }
 }
 @-webkit-keyframes css {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 40%;  }
 }
 @-webkit-keyframes html5 {
   0%   { width: 0px;  }
-  100% { width: 50%;  }
+  100% { width: 40%;  }
 }
 @-webkit-keyframes jquery {
   0%   { width: 0px;  }
@@ -1002,6 +1002,85 @@ footer .social-links li:first-child { margin-left: 0; }
    font-size: 21px;
    line-height: 60px;
  	border-radius: 100%;
+}
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.modal-content, #caption { 
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
 }
 #go-top a:hover { background-color: #0F9095; }
 
